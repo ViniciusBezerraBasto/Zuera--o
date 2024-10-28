@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="conteudo">
+        <h1>Quer casar comigo?</h1>
+        <button class="bb" onclick="sim()">SIM</button>
+        <button class="bb" id="btn" onclick="desvia(this) " onmouseover="desvia(this)">NÃO</button>
+    </div>
+</body>
+    <script>
+        function sim(){
+         alert("Você aceitou casar comigo:) NÃO CLIQUE NO NÃO")
+        }
+
+        function desvia(t){
+         var btn = t
+         btn.style.position = 'absolute';
+         btn.style.bottom = geraposicao(10, 90);
+         btn.style.left = geraposicao(10, 90);
+        }
+
+        function geraposicao(min, max) {
+            return Math.random() * ((max - min) + min) + "%";
+        }
+    </script>
+</html>
